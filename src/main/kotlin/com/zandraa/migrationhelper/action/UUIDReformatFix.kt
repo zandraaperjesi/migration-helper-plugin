@@ -12,6 +12,8 @@ import com.zandraa.migrationhelper.utils.FIND_UUID_LONG_REGEX
 class UUIDReformatFix : BaseIntentionAction(), HighPriorityAction {
     override fun getFamilyName(): String = "All caps, no dash"
 
+    override fun getText(): String = "Reformat UUIDs to proper format"
+
     override fun isAvailable(project: Project, editor: Editor?, file: PsiFile?): Boolean {
         return (file as? XmlFileImpl)?.isValid ?: false
     }

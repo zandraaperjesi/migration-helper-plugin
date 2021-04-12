@@ -33,7 +33,7 @@ private fun highlightInText(
     val startOffset = element.textRange.startOffset
     rawText.findUUIDs().forEach { (matchingValue, range) ->
         val textRange = range.textRange(startOffset)
-        holder.newAnnotation(HighlightSeverity.INFORMATION, "UUID")
+        holder.newAnnotation(HighlightSeverity.INFORMATION, "This UUID format is not compatible with OracleDB")
                 .range(textRange)
                 .withFix(UUIDReformatFix())
                 .enforcedTextAttributes(TextAttributes(Color.CYAN, null, Color.MAGENTA, EffectType.BOLD_DOTTED_LINE, 0))

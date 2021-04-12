@@ -12,12 +12,10 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
         <annotator language=""
                    implementationClass="com.zandraa.migrationhelper.annotator.UUIDAnnotator"/>
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
     </actions>
 </idea-plugin>
