@@ -7,6 +7,7 @@ val VALUE_WITH_DATE_REGEX = """value="(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\
 val VALUE_WITH_DATE_REGEX_WITH_T = """value="(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})"""".toRegex()
 val VALUE_WITH_DATE_REGEX_WITH_T_S = """value="(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})S"""".toRegex()
 val VALUE_WITH_DATE_REGEX_WITH_MILLIS = """value="(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}).(\d{3})Z"""".toRegex()
+val VALUE_WITH_BOOL_REGEX = """value="(true|false)"""".toRegex()
 
 val VALUE_KEY = "value="
 val VALUE_DATE_KEY = "valueDate="
@@ -27,6 +28,9 @@ object SpecialValueUtil {
                 offset + it.last + 1
         )
     }
+
+    fun CharSequence.findBoolValues() = VALUE_WITH_BOOL_REGEX.findAll(this)
+            .map { it.value to it.range }
 
     fun valueToValueDate(editor: Editor, range: TextRange) {
         editor.document.replaceString(range.startOffset - VALUE_KEY.length, range.startOffset, VALUE_DATE_KEY)

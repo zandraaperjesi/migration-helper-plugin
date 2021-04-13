@@ -10,10 +10,10 @@ import com.intellij.psi.PsiFile
 import com.intellij.psi.impl.source.xml.XmlFileImpl
 import com.zandraa.migrationhelper.utils.SpecialValueUtil
 
-class DateValueFix(
+class BoolValueFix(
         private val textRange: TextRange
 ) : BaseIntentionAction(), HighPriorityAction {
-    override fun getFamilyName(): String = "value to valueDate"
+    override fun getFamilyName(): String = "value to valueBoolean"
 
     override fun getText(): String = "Change 'value' tag to 'valueBoolean'"
 

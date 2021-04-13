@@ -22,8 +22,8 @@ class UUIDReformatFix : BaseIntentionAction(), HighPriorityAction {
         WriteCommandAction.runWriteCommandAction(project) {
             editor?.document?.replaceString(
                     0,
-                    editor?.document?.getText()?.length,
-                    editor?.document?.text?.replace(FIND_UUID_LONG_REGEX) {it.value.toUpperCase().replace("-", "")})
+                    editor.document.getText().length,
+                    editor.document.text.replace(FIND_UUID_LONG_REGEX) {it.value.toUpperCase().replace("-", "")})
         }
     }
 }
