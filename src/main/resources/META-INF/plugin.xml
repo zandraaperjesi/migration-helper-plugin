@@ -13,6 +13,8 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <annotator language=""
+                   implementationClass="com.zandraa.migrationhelper.annotator.ValueDateAnnotator"/>
+        <annotator language=""
                    implementationClass="com.zandraa.migrationhelper.annotator.UUIDAnnotator"/>
     </extensions>
 
