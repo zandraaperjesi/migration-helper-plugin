@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.zandraa'
-version '1.0-SNAPSHOT'
+version '1.0.3-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2020.1.2'
+    version '2021.1'
 }
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
