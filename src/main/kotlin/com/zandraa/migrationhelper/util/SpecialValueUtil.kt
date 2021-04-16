@@ -1,4 +1,4 @@
-package com.zandraa.migrationhelper.utils
+package com.zandraa.migrationhelper.util
 
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.util.TextRange

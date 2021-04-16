@@ -10,6 +10,7 @@
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <annotator language=""
@@ -21,5 +22,11 @@
     </extensions>
 
     <actions>
+        <action id="migrationgenerator.insert"
+                class="com.zandraa.migrationhelper.action.GenerateInsertTagAction"
+                text="Create &lt;Insert&gt; Tag from File"
+                description="Generate a changeset containing insert for an entity">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
     </actions>
 </idea-plugin>

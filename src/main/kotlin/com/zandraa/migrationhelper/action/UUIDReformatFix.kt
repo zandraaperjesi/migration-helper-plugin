@@ -7,7 +7,7 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiFile
 import com.intellij.psi.impl.source.xml.XmlFileImpl
-import com.zandraa.migrationhelper.utils.FIND_UUID_LONG_REGEX
+import com.zandraa.migrationhelper.util.FIND_UUID_LONG_REGEX
 
 class UUIDReformatFix : BaseIntentionAction(), HighPriorityAction {
     override fun getFamilyName(): String = "All caps, no dash"

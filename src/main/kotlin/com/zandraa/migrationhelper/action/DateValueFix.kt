@@ -8,7 +8,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.TextRange
 import com.intellij.psi.PsiFile
 import com.intellij.psi.impl.source.xml.XmlFileImpl
-import com.zandraa.migrationhelper.utils.SpecialValueUtil
+import com.zandraa.migrationhelper.util.SpecialValueUtil
 
 class DateValueFix(
         private val textRange: TextRange

@@ -8,8 +8,8 @@ import com.intellij.openapi.editor.markup.TextAttributes
 import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.xml.XmlTokenImpl
 import com.zandraa.migrationhelper.action.UUIDReformatFix
-import com.zandraa.migrationhelper.utils.findUUIDs
-import com.zandraa.migrationhelper.utils.textRange
+import com.zandraa.migrationhelper.util.findUUIDs
+import com.zandraa.migrationhelper.util.textRange
 import java.awt.Color
 
 class UUIDAnnotator : Annotator {

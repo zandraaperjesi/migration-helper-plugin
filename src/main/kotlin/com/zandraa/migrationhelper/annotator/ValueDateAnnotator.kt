@@ -8,8 +8,8 @@ import com.intellij.openapi.editor.markup.TextAttributes
 import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.xml.XmlFileImpl
 import com.zandraa.migrationhelper.action.DateValueFix
-import com.zandraa.migrationhelper.utils.SpecialValueUtil.findDateValues
-import com.zandraa.migrationhelper.utils.SpecialValueUtil.valueTextRange
+import com.zandraa.migrationhelper.util.SpecialValueUtil.findDateValues
+import com.zandraa.migrationhelper.util.SpecialValueUtil.valueTextRange
 import java.awt.Color
 
 class ValueDateAnnotator : Annotator {
