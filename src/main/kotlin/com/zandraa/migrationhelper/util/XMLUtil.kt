@@ -9,20 +9,18 @@ class XMLUtil {
     companion object {
         fun addInsert(entityFields: MutableList<PsiField>, name: @Nullable @NlsSafe String?): String {
             var generateColumnTag = entityFields.map { generateColumnTag(it) }
-                .joinToString(separator = "\n    ") { it }
-            return """
-<insert tableName="${name?.camelToSnake()}">
-    $generateColumnTag
-</insert>
-"""
+                .joinToString(separator = "\n") { it }
+            return """<insert tableName="${name?.camelToSnake()}">
+$generateColumnTag
+        </insert>"""
         }
 
         private fun generateColumnTag(field: PsiField): String {
 
             return when (field.type) {
-                PsiType.BOOLEAN -> """<column name="${field.name.camelToSnake()}" valueBoolean=""/>"""
+                PsiType.BOOLEAN -> """            <column name="${field.name.camelToSnake()}" valueBoolean=""/>"""
                 //todo date
-                else -> """<column name="${field.name.camelToSnake()}" value=""/>"""
+                else -> """            <column name="${field.name.camelToSnake()}" value=""/>"""
             }
         }
     }
