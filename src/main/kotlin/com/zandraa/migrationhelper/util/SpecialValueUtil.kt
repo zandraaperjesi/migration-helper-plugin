@@ -9,6 +9,8 @@ val VALUE_WITH_DATE_REGEX_WITH_T_S = """value="(\d{4})-(\d{2})-(\d{2})T(\d{2}):(
 val VALUE_WITH_DATE_REGEX_WITH_MILLIS = """value="(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}).(\d{3})Z"""".toRegex()
 val VALUE_WITH_BOOL_REGEX = """value="(true|false)"""".toRegex()
 
+val COLUMN_ANNOTATION = """@Column\(name=\"(.*?)\"\)""".toRegex()
+
 val VALUE_KEY = "value="
 val VALUE_DATE_KEY = "valueDate="
 
